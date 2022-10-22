@@ -5,11 +5,11 @@ const ctrlLocations = require('../controllers/locations');
 const ctrlOthers = require('../controllers/others');
 
 
-/* Locations pages */
-router.get('/', ctrlLocations.homelist);
-router.get('/location', ctrlLocations.locationInfo);
-router.get('/location/review/new', ctrlLocations.addReview);
-/* Other pages */
+/* Home page */
+router.get('/', ctrlLocations.homePage);
+router.get('/location', ctrlLocations.loginPage);
+router.get('/location', ctrlLocations.registerPage);
+/* Login pages */
 router.get('/about', ctrlOthers.about);
 module.exports = router;
 
