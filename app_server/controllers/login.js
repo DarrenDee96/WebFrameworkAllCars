@@ -1,6 +1,6 @@
 /* GET 'login' page */
 const loginPage = function(req, res){
-res.render('index', { title: 'Login' });
+res.render('login', { title: 'Login' });
 };
 module.exports = { 
 loginPage
