@@ -21,16 +21,6 @@ addReview
 const homePage = function(req, res){
 res.render('index', { title: 'Home' });
 };
-/* GET 'login' page */
-const loginPage = function(req, res){
-res.render('index', { title: 'Login' });
-};
-/* GET 'register' page */
-const registerPage = function(req, res){
-res.render('index', { title: 'Register' });
-};
 module.exports = {
-homePage,
-loginPage,
-registerPage
+homePage
 };
