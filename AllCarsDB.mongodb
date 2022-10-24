@@ -1,0 +1,152 @@
+// MongoDB Playground
+
+use('allCarsDB');
+db.accounts.drop();
+db.listings.drop();
+db.createCollection('accounts');
+db.createCollection('listings');
+
+
+db.accounts.insertMany([
+  { 'accountID': 1,
+    'name': 'Darren Dineen',
+    'email': 'darren.dineen@students.itralee.ie',
+    'password': 'abbcde',
+    listings: [
+        {
+        'listingId': 1222,
+        },{
+        'listingId': 1255,    
+        }
+    ]
+    },
+      { 'accountID': 2,
+    'name': 'Patrick Buckley',
+    'email': 'pbuckley19@gmail.com',
+    'password': 'affgee',
+    listings: [
+        {
+        'listingId': 1256,
+        },{
+        'listingId': 1257,    
+        }
+    ]
+    },
+      { 'accountID': 3,
+    'name': 'Kevin Hurley',
+    'email': 'kevinhurley@gmail.com',
+    'password': 'ffgeedt',
+    listings: [
+        {
+        'listingId': 1258,
+        },{
+        'listingId': 1259,    
+        }
+    ]
+    },
+      { 'accountID': 4,
+    'name': 'Ricard Manning',
+    'email': 'ricman10@gmail.com',
+    'password': 'fortift',
+    listings: [
+        {
+        'listingId': 1260,
+        },{
+        'listingId': 1261,    
+        }
+    ]
+    }
+]);
+
+db.listings.insertMany([
+  { 'listingId': 1222,
+    'make' : 'Audi',
+    'model' : 'A4',
+    'price' : 2600,
+    'mileage' : 200000,
+    'year' : 2005,
+    'fuel type' : 'Diesel',
+    'engine size' : 1.9,
+    'nctDate' : new Date('2023-02-15'),
+    'taxDate' : new Date('2022-12-31')
+    },
+    { 'listingId': 1255,
+    'make' : 'Honda',
+    'model' : 'Civic',
+    'price' : 3800,
+    'mileage' : 120000,
+    'year' : 1994,
+    'fuel type' : 'Petrol',
+    'engine size' : 1.6,
+    'nctDate' : new Date('2023-04-25'),
+    'taxDate' : new Date('2023-02-23')
+    },
+    { 'listingId': 1256,
+    'make' : 'Honda',
+    'model' : 'Civic',
+    'price' : 2900,
+    'mileage' : 100000,
+    'year' : 1998,
+    'fuel type' : 'Petrol',
+    'engine size' : 1.6,
+    'nctDate' : new Date('2023-04-18'),
+    'taxDate' : new Date('2023-01-31')
+    },
+      { 'listingId': 1257,
+    'make' : 'Honda',
+    'model' : 'Integra',
+    'price' : 4000,
+    'mileage' : 81000,
+    'year' : 1997,
+    'fuel type' : 'Petrol',
+    'engine size' : 1.6,
+    'nctDate' : new Date('2022-12-28'),
+    'taxDate' : new Date('2022-12-31')
+    },
+      { 'listingId': 1258,
+    'make' : 'Seat',
+    'model' : 'Toledo',
+    'price' : 2100,
+    'mileage' : 180000,
+    'year' : 2003,
+    'fuel type' : 'Diesel',
+    'engine size' : 1.9,
+    'nctDate' : new Date('2023-02-10'),
+    'taxDate' : new Date('2022-12-31')
+    },
+      { 'listingId': 1259,
+    'make' : 'Honda',
+    'model' : 'Civic',
+    'price' : 2600,
+    'mileage' : 45000,
+    'year' : 1996,
+    'fuel type' : 'Petrol',
+    'engine size' : 1.4,
+    'nctDate' : new Date('2023-09-18'),
+    'taxDate' : new Date('2023-06-31')
+    },
+      { 'listingId': 1260,
+    'make' : 'BMW',
+    'model' : '3 Series',
+    'price' : 3600,
+    'mileage' : 175000,
+    'year' : 1997,
+    'fuel type' : 'Petrol',
+    'engine size' : 1.8,
+    'nctDate' : new Date('2022-11-18'),
+    'taxDate' : new Date('2022-11-31')
+    },
+      { 'listingId': 1261,
+    'make' : 'Seat',
+    'model' : 'Toledo',
+    'price' : 1800,
+    'mileage' : 280000,
+    'year' : 2002,
+    'fuel type' : 'Diesel',
+    'engine size' : 1.9,
+    'nctDate' : new Date('2023-04-15'),
+    'taxDate' : new Date('2022-11-31')
+    },
+
+])
+
