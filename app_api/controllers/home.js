@@ -1,11 +1,34 @@
 const mongoose = require('mongoose');
 const Accounts = mongoose.model('Accounts');
+const Listings = mongoose.model('Listings');
 
-const vehicleData = function (req, res) {
-    res
-.status(200)
-.json({"status" : "success"});
-};
+
+    const vehicleData = function (req, res) {
+        //get all listings
+        Listings
+            .find()
+            .exec((err, listings) => {
+                if (!listings) {
+                    res
+                        .status(404)
+                        .json({
+                            "message": "No listings found"
+                        });
+                    return;
+                } else if (err) {
+                    res
+                        .status(404)
+                        .json(err);
+                    return;
+                }
+                res
+                    .status(200)
+                    .json(listings)
+            });
+    };
+    
+
+
 const placeAdd = function(req,res) {
     res
 .status(200)

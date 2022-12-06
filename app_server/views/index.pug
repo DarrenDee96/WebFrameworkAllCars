@@ -39,7 +39,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
         li.nav-item
           a.nav-link(href='#!') Place Add
       form.d-flex
-        button.btn.btn-outline-dark(type='button' style='background: rgb(0, 0, 0); color: rgb(255, 255, 255); margin-right: 5px;') Register
+        button.btn.btn-outline-dark(type='button' href= '/register' style='background: rgb(0, 0, 0); color: rgb(255, 255, 255); margin-right: 5px;') Register
         button.btn.btn-outline-dark(type='button' style='background: rgb(255, 255, 255); color:rgb(11, 11, 11);') Login
 // Header
 header.bg-dark.py-5(style=' background-image: linear-gradient(#91ebf6, white);')
@@ -51,223 +51,34 @@ header.bg-dark.py-5(style=' background-image: linear-gradient(#91ebf6, white);')
 section.py-5
   .container.px-4.px-lg-5.mt-5
     .row.gx-4.gx-lg-5.row-cols-2.row-cols-md-3.row-cols-xl-4.justify-content-center
-      .col.mb-5
-        .card.h-100
-          // Product image
-          img.card-img-top(src='D:\MTU Year 3\Web Frameworks\Project\AllCarsProject\public\images\A4.jpg' alt='...')
-          // Product details
-          .card-body.p-4
-            .text-center
-              // Product name
-              h5.fw-bolder #{listings.make} #{listings.model}
-              // Product price
-              | &euro;#{listings.price}
-              div
-                | #{listings.year}
-                br
-                |  #{listings.enginesize}
-                br
-                |  #{listings.fueltype}
-                br
-                |  #{listings.nctDate}
-                br
-                |  #{listings.mileage} 
-                br
-                |  #{listings.taxDate}
-          // Product actions
-          .card-footer.p-4.pt-0.border-top-0.bg-transparent
-            .text-center
-              a.btn.btn-outline-dark.mt-auto(href='#') More Details
-      .col.mb-5
-        .card.h-100
-          // Product image
-          img.card-img-top(src='assets/EG.jpg' alt='...')
-          // Product details
-          .card-body.p-4
-            .text-center
-              // Product name
-              h5.fw-bolder #{listings.make} #{listings.model}
-              // Product price
-              | &euro;#{listings.price}
-              div
-                | #{listings.year}
-                br
-                |  #{listings.enginesize}
-                br
-                |  #{listings.fueltype}
-                br
-                |  #{listings.nctDate}
-                br
-                |  #{listings.mileage} 
-                br
-                |  #{listings.taxDate}
-          // Product actions
-          .card-footer.p-4.pt-0.border-top-0.bg-transparent
-            .text-center
-              a.btn.btn-outline-dark.mt-auto(href='#') More Details
-      .col.mb-5
-        .card.h-100
-          // Product image
-          img.card-img-top(src='assets/EJ96.jpg' alt='...')
-          // Product details
-          .card-body.p-4
-            .text-center
-              // Product name
-              h5.fw-bolder #{listings.make} #{listings.model}
-              // Product price
-              | &euro;#{listings.price}
-              div
-                | #{listings.year}
-                br
-                |  #{listings.enginesize}
-                br
-                |  #{listings.fueltype}
-                br
-                |  #{listings.nctDate}
-                br
-                |  #{listings.mileage} 
-                br
-                |  #{listings.taxDate}
-          // Product actions
-          .card-footer.p-4.pt-0.border-top-0.bg-transparent
-            .text-center
-              a.btn.btn-outline-dark.mt-auto(href='#') More Details
-      .col.mb-5
-        .card.h-100
-          // Product image
-          img.card-img-top(src='assets/Teg.jpg' alt='...')
-          // Product details
-          .card-body.p-4
-            .text-center
-              // Product name
-              h5.fw-bolder #{listings.make} #{listings.model}
-              // Product price
-              | &euro;#{listings.price}
-              div
-                | #{listings.year}
-                br
-                |  #{listings.enginesize}
-                br
-                |  #{listings.fueltype}
-                br
-                |  #{listings.nctDate}
-                br
-                |  #{listings.mileage} 
-                br
-                |  #{listings.taxDate}
-          // Product actions
-          .card-footer.p-4.pt-0.border-top-0.bg-transparent
-            .text-center
-              a.btn.btn-outline-dark.mt-auto(href='#') More Details
-      .col.mb-5
-        .card.h-100
-          // Product image
-          img.card-img-top(src='assets/Toledo.jpg' alt='...')
-          // Product details
-          .card-body.p-4
-            .text-center
-              // Product name
-              h5.fw-bolder #{listings.make} #{listings.model}
-              // Product price
-              | &euro;#{listings.price}
-              div
-                | #{listings.year}
-                br
-                |  #{listings.enginesize}
-                br
-                |  #{listings.fueltype}
-                br
-                |  #{listings.nctDate}
-                br
-                |  #{listings.mileage} 
-                br
-                |  #{listings.taxDate}
-          // Product actions
-          .card-footer.p-4.pt-0.border-top-0.bg-transparent
-            .text-center
-              a.btn.btn-outline-dark.mt-auto(href='#') More Details
-      .col.mb-5
-        .card.h-100
-          // Product image
-          img.card-img-top(src='assets/RedEj9.jpg' alt='...')
-          // Product details
-          .card-body.p-4
-            .text-center
-              // Product name
-              h5.fw-bolder #{listings.make} #{listings.model}
-              // Product price
-              | &euro;#{listings.price}
-              div
-                | #{listings.year}
-                br
-                |  #{listings.enginesize}
-                br
-                |  #{listings.fueltype}
-                br
-                |  #{listings.nctDate}
-                br
-                |  #{listings.mileage} 
-                br
-                |  #{listings.taxDate}
-          // Product actions
-          .card-footer.p-4.pt-0.border-top-0.bg-transparent
-            .text-center
-              a.btn.btn-outline-dark.mt-auto(href='#') More Details
-      .col.mb-5
-        .card.h-100
-          // Product image
-          img.card-img-top(src='assets/E36.jpg' alt='...')
-          // Product details
-          .card-body.p-4
-            .text-center
-              // Product name
-              h5.fw-bolder #{listings.make} #{listings.model}
-              // Product price
-              | &euro;#{listings.price}
-              div
-                | #{listings.year}
-                br
-                |  #{listings.enginesize}
-                br
-                |  #{listings.fueltype}
-                br
-                |  #{listings.nctDate}
-                br
-                |  #{listings.mileage} 
-                br
-                |  #{listings.taxDate}
-          // Product actions
-          .card-footer.p-4.pt-0.border-top-0.bg-transparent
-            .text-center
-              a.btn.btn-outline-dark.mt-auto(href='#') More Details
-      .col.mb-5
-        .card.h-100
-          // Product image
-          img.card-img-top(src='assets/SilverToledo.jpg' alt='...')
+      for listing in listings
+        .col.mb-5
+          .card.h-100
+            // Product image
           
-          // Product details
-          .card-body.p-4
-            .text-center
-              // Product name
-              h5.fw-bolder #{listings.make} #{listings.model}
-              // Product price
-              | &euro;#{listings.price}
-              div
-                | #{listings.year}
-                br
-                |  #{listings.enginesize}
-                br
-                |  #{listings.fueltype}
-                br
-                |  #{listings.nctDate}
-                br
-                |  #{listings.mileage} 
-                br
-                |  #{listings.taxDate}
-          // Product actions
-          .card-footer.p-4.pt-0.border-top-0.bg-transparent
-            .text-center
-              a.btn.btn-outline-dark.mt-auto(href='#') More Details
+            // Product details
+            .card-body.p-4
+              .text-center
+                // Product name
+                h5.fw-bolder #{listing.make} #{listing.model}
+                // Product price
+                | Price: &euro;#{listing.price}
+                div
+                  | Year: #{listing.year}
+                  br
+                  |  #{listing.enginesize}
+                  br
+                  |  #{listing.fueltype}
+                  br
+                  | NCT Due Date:  #{listing.nctDate}
+                  br
+                  | Mileage:  #{listing.mileage} 
+                  br
+                  | Tax Due Date #{listing.taxDate}
+            // Product actions
+            .card-footer.p-4.pt-0.border-top-0.bg-transparent
+              .text-center
+                a.btn.btn-outline-dark.mt-auto(href='#') More Details
 // Footer
 footer.py-5.bg-dark
   .container
@@ -277,6 +88,6 @@ script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundl
 // Core theme JS
 script(src='js/scripts.js')
 block scripts
-      script(src='/build/runtime.b35605b75f464692.js')
-      script(src='/build/polyfills.b623e773dfd681cf.js')
-      script(src='/build/main.d766bf2ac5807721.js')
+      script(src='build/runtime.b35605b75f464692.js')
+      script(src='build/polyfills.b623e773dfd681cf.js')
+      script(src='build/main.d766bf2ac5807721.js')

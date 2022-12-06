@@ -55,19 +55,17 @@ section.vh-100.bg-image(style='background-color: white; ')
           .card(style='border-radius: 15px; ')
             .card-body.p-5
               h2.text-uppercase.text-center.mb-5 Register
-              form
+              form(action = '/register',method='post')
                 .form-outline.mb-4
                   input#form3Example1cg.form-control.form-control-lg(type='text')
-                  label.form-label(for='form3Example1cg') Your Name
+                  label.form-label(for='Name') Your Name
                 .form-outline.mb-4
                   input#form3Example3cg.form-control.form-control-lg(type='email')
-                  label.form-label(for='form3Example3cg') Your Email
+                  label.form-label(for='Email') Your Email
                 .form-outline.mb-4
                   input#form3Example4cg.form-control.form-control-lg(type='password')
-                  label.form-label(for='form3Example4cg') Password
-                .form-outline.mb-4
-                  input#form3Example4cdg.form-control.form-control-lg(type='password')
-                  label.form-label(for='form3Example4cdg') Repeat your password
+                  label.form-label(for='Password') Password
+  
                 .form-check.d-flex.justify-content-center.mb-5
                   input#form2Example3cg.form-check-input.me-2(type='checkbox' value='')
                   label.form-check-label(for='form2Example3g')
@@ -75,7 +73,7 @@ section.vh-100.bg-image(style='background-color: white; ')
                     a.text-body(href='#!')
                       u Terms of service
                 .d-flex.justify-content-center
-                  button.btn.btn-primary.d-block.w-100(type='button' button='') Register
+                  button.btn.btn-primary.d-block.w-100(type='submit') Register
                 p.text-center.text-muted.mt-5.mb-0
                   | Have already an account? 
                   a.fw-bold.text-body(href='#!')
