@@ -43,11 +43,6 @@ const home = function(req, res) {
     }
 }
 
-
-
-
-    
-
     
 module.exports = {
     vehicleData,
