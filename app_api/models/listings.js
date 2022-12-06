@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+
+
 const listingsSchema = new mongoose.Schema({
     listingId: {
         type: Number,
@@ -9,7 +11,7 @@ const listingsSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    mode: {
+    model: {
         type: String, 
         required: true
     },

@@ -7,10 +7,10 @@ const ctrlRegister = require('../controllers/register')
 
 
 /* Home page */
-router.get('/', ctrlHome.homePage);
+router.get('/', ctrlHome.home);
 
 /* Login page */
-router.get('/login', ctrlLogin.loginPage);
+router.get('/login', ctrlLogin.login);
 module.exports = router;
 
 /* Register page */

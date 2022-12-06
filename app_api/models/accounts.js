@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const listingSchema = require('./listings');
 
 const accountsSchema = new mongoose.Schema(
     {
@@ -19,8 +19,8 @@ const accountsSchema = new mongoose.Schema(
         type: String,
         requred: true
     },
-    listings: [listingsSchema] 
+    listings: [listingSchema] 
     }
 );
 
-mongoose.model('Accounts', accountSchema)
+mongoose.model('Accounts', accountsSchema)

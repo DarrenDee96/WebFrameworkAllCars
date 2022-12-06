@@ -12,5 +12,14 @@ mongoose.connect(
 catch (e) {
   console.log("Mongoose could not connect");
 }
+
+
+const dbConnection = mongoose.connection;
+dbConnection.on("error", (err) => console.log(`Connection error 
+${err}`));
+dbConnection.once("open", () => console.log("Connected to DB!"));
+
 require('./accounts');
-require('./listings');
+
+
+
