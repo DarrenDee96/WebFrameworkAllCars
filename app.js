@@ -7,14 +7,22 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-//const indexRouter = require('./app_server/routes/index');
-//const usersRouter = require('./app_server/routes/users');
+
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
+var privateKey  = fs.readFileSync('./sslcert/key.pem', 'utf8');
+var certificate = fs.readFileSync('./sslcert/cert.pem', 'utf8');
+var credentials = {key: privateKey, cert: certificate};
+const app = express();
+var httpServer = http.createServer(app);
+var httpsServer = https.createServer(credentials, app);
+httpServer.listen(8000);
+httpsServer.listen(443);
+
 
 const apiRoutes = require('./app_api/routes/index');
 const appRoutes = require('./app_server/routes/index');
-
-
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));
@@ -27,8 +35,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'app_public')));
 
-//app.use('/', indexRouter);
-//app.use('/users', usersRouter);
 
 app.use('/api', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', 
