@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const listingSchema = require('./listings');
+var passportLocalMongoose = require('passport-local-mongoose');
 
 const accountsSchema = new mongoose.Schema(
     {

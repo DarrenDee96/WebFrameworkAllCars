@@ -20,6 +20,8 @@ var httpsServer = https.createServer(credentials, app);
 httpServer.listen(8000);
 httpsServer.listen(443);
 
+//const indexRouter = require('./app_server/routes/index');
+//const usersRouter = require('./app_server/routes/users');
 
 const apiRoutes = require('./app_api/routes/index');
 const appRoutes = require('./app_server/routes/index');
@@ -35,6 +37,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'app_public')));
 
+//app.use('/', indexRouter);
+//app.use('/users', usersRouter);
 
 app.use('/api', function(req, res, next) {
   res.header('Access-Control-Allow-Origin', 
@@ -61,5 +65,11 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+/*Had a lot of trouble implementing Passport.js
+var Account = require('./models/account');
+passport.use(new LocalStrategy(Account.authenticate()));
+passport.serializeUser(Account.serializeUser());
+passport.deserializeUser(Account.deserializeUser());*/
+
 
 module.exports = app;
